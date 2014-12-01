@@ -37,6 +37,10 @@ QCOM_ADSP_SSR_ENABLED := false
 QCOM_ANC_HEADSET_ENABLED := false
 QCOM_FLUENCE_ENABLED := false
 
+# Bionic
+BOARD_USES_LEGACY_MMAP := true
+MALLOC_IMPL := dlmalloc
+
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 
@@ -57,7 +61,6 @@ BOARD_HARDWARE_CLASS += device/samsung/msm8960-common/cmhw
 
 # Display
 BOARD_EGL_CFG := device/samsung/msm8960-common/configs/egl.cfg
-BOARD_USES_LEGACY_MMAP := true
 COMMON_GLOBAL_CFLAGS += -DNEW_ION_API
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_DISPLAY_INSECURE_MM_HEAP := true
